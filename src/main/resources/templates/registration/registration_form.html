@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru-RU"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  >
+<head th:replace="~{header_bs ::head_ccs_bs}"></head>
+<body>
+<div th:replace="~{header_bs ::top}"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-xs-12 col-sm-12" style="background: white; box-shadow: 0 0 2px gray; padding-bottom:1em;" >
+        <p th:if="${message}" class="text_msgbox">  <span th:if="${message}" th:utext="${message}"></span></p>
+        <form class="form" height=470px th:action="@{/registration/adduser}" method="post" autocomplete="on">
+            <h3 class="form-signin-heading"> <span><b>Регистрация</b></span></h3>
+            <div class="form-group ">
+               <!-- <label for="registration-username">Имя пользователя</label>-->
+                <input type="text" name="username" id="registration-username" placeholder="Имя пользователя" th:value="${username}" class="form-control" tabindex="1"/>
+            </div>
+            <div class="form-group">
+                <!--<label for="registration-password">Пароль</label>-->
+                <input type="password" name="password" id="registration-password" placeholder="Пароль" th:value="${password} " class="form-control" tabindex="2"/>
+            </div>
+            <div class="form-group">
+                <!--<label for="registration-repPassword">Повторите пароль</label>-->
+                <input type="password" name="repeatedPassword" th:value="${repeatedPassword}" id="registration-repPassword" placeholder="Повторите пароль" class="form-control" tabindex="3"/>
+            </div>
+            <div class="form-group">
+                <!--<label for="registration-email">Email</label>-->
+                <input type="text" name="email" id="registration-email" th:value="${email}" placeholder="Email fff@ggg.rr" class="form-control" tabindex="4"/>
+            </div>
+            <div class='form-group'>
+                <label for="checkboxUserAgrees"> Подтверждаю согласие на использование сервиса </label>
+                <input type="checkbox"  name="UserAgrees" value="IAgree" id="checkboxUserAgrees" tabindex="5"/>
+            </div>
+            <p th:if="${message}" class="alert-warning">  <span th:if="${message}" th:utext="${message}"></span></p>
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <input type="submit" class="btn btn-primary" value="Зарегистрироваться" tabindex="6">
+            <h6>
+                На указанный вами e-mail будет отправлено электронное письмо со ссылкой для активации.<br>
+                Проверьте ваш e-mail еще раз.<br>
+                Если вы перейдете по ссылке в течение 48 часов с момента регистрации,<br>
+                тем вы подтвердите свое согласие с текстом Соглашения и можете войти в Личный кабинет, <br>
+                иначе запись вашей регистрации будет удалена в 4.00 послезавтра и вы сможете повторить регистрацию. <br>
+            </h6>
+        </form>
+        <a href="#myMess" class="btn btn-default" data-toggle="modal">Прочитать соглашение</a>
+
+        <div id="myMess" class="modal fade">
+        <div class="alert alert-warning dismiss-alert" role="alert">
+             <h5>
+                Я знаю требования к Api!
+                </h5>
+                <button type="button" class="btn btn-default" data-dismiss="modal" autofocus>Закрыть</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
+
+

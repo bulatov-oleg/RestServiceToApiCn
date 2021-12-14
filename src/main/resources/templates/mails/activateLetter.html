@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+        <title></title>
+        <style type="text/css">
+            body {
+                background-color: #E8E8E8;
+                margin: 0;
+                overflow-x: hidden;
+                /*font-family: Arial;*/
+            }
+        </style>
+
+ </head>
+<body>
+
+<div >
+ <!--   <p> <img src="sample.png" th:src="|cid:${imageResourceName}|" /> </p> -->
+    <p >Здравствуйте, <span th:utext="${#ctx.userName}">Клиент</span> ! <br>
+        Добро пожаловать в Сервис <span th:utext="${MyApp.getNameApp()}"></span>. Для активации используйте ссылку:<br>
+        <a th:href="${#ctx.activateUrl}">Ссылка для активации</a>
+    </p>
+</div>
+
+<div >
+    <p th:if="${MyApp.getNameApp()}!=null">
+        <span th:utext="${MyApp.getNameApp()}+${MyApp.getYearDeveloping()}"></span>
+    </p>
+</div>
+
+</body>
+</html>

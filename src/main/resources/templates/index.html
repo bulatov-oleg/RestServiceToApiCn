@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{header_bs ::head_ccs_bs}"></head>
+
+<body>
+<div th:replace="~{header_bs ::top}"></div>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12" style="background: white; box-shadow: 0 0 2px gray; padding-bottom:1em;" >
+
+                    <br>
+                    <h5>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Cервис предназначен для работы сотрудников управляющей компании или
+                        расчетного центра. Основа - api для обеспечения синхронизации данных.
+
+                </h5>
+                <!--<h5>
+                    Отслеживайте состояние своего лицевого счета и операции на нем.<br>
+                    Подавайте новые показания с любого устройства!<br>
+                </h5>-->
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12 " align="center">
+                <h6>
+                    <br><br>
+                    <b>Мы используем cookies  для работы сайта. Пожалуйста, разрешите(включите) cookies для Вашего браузера.</b>
+                    <br>
+                </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="~{footer ::footer}"></div>
+<!--<div th:insert="~{footer ::LiveInternet}"></div>-->
+</body>
+</html>

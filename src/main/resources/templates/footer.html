@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru-RU"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  >
+
+<head>
+</head>
+<body>
+<div th:fragment="footer" class="container"  >
+<p class="footer_text" style="text-align: center;
+						z-index:-2000;
+                        color:  #B8B8B8;
+                        font-size: 0.8em;
+                        line-height: 1px;
+                        bottom: 0;
+                        position: fixed;
+                        left: 0;
+                        padding: 0;
+                        width: 100%;"
+    th:if="${MyApp.nameApp}!=null">
+    <span th:utext="${MyApp.nameApp}+${MyApp.yearDeveloping}"></span>
+</p>
+</div>
+<!--<div id="LiveInternet" th:fragment="LiveInternet">-->
+    <!--LiveInternet counter-->
+<!--<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r"+escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";h"+escape(document.title.substring(0,150))+";"+Math.random();</script>-->
+<!--/LiveInternet-->
+<!--</div>-->
+</body>
+</html>
+

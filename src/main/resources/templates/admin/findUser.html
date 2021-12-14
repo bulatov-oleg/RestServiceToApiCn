@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ru-RU"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  >
+<head th:replace="~{header_bs ::head_ccs_bs}"></head>
+<head>
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/css/bootstrap/tabulator_bootstrap.min.css" rel="stylesheet">-->
+<!--
+    <link href="/lib/tabulator/tabulator_simple.min.css" rel="stylesheet">
+-->
+    <link href="/lib/tabulator/tabulator_semantic-ul.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/lib/tabulator/tabulator_4.1.1_js_tabulator.js"></script>
+</head>
+
+<body>
+    <div th:replace="~{header_bs ::top}"></div>
+
+    <p th:if="${error_noUser}" class='alert-warning'> Нет такого пользователя </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <h3> Выбираем пользователя</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="below_nav" id="users-table"> </div>
+        </div>
+    </div>
+
+</body>
+
+<script th:inline="javascript">
+    window.onload = function () {
+        //custom formatter definition
+        var editButton = function (cell, formatterParams, onRendered) {
+            return "<img src='/images/edit.bmp' alt='Изменить'>";}
+
+        var emailText = function (cell, formatterParams, onRendered) { //plain text value
+            return "<div><b>" + cell.getValue() + "</b></div>";
+        };
+
+
+        var table = new Tabulator('#users-table', {
+            //height: "520px",
+//        locale : true ,
+            pagination: "remote",// "local",
+            paginationSize: 10,
+            layout: "fitDataFill",
+            layoutColumnsOnNewData: true,
+            ajaxURL: '/apitabulator/getJsonPageOfUsers',
+            ajaxConfig: "GET",
+            ajaxContentType:"form",
+/*
+            ajaxProgressiveLoad: "load",
+            ajaxProgressiveLoadDelay:200,
+*/
+            ajaxFiltering: true, //headerFilter:"input", headerFilterLiveFilter:false - тогда работает
+            movableColumns: true,
+            langs: {
+                "ru_RU": {
+                    "pagination": {
+                        "first": "Начало",
+                        "first_title": "Начало",
+                        "last": "Конец",
+                        "last_title": "Конец",
+                        "prev": "<",
+                        "prev_title": "<",
+                        "next": ">",
+                        "next_title": ">"
+                    },
+                    "ajax": {
+                        "loading": "Загрузка",
+                        "error": "Ошибка"
+                    },
+                    "headerFilters":{"default":"Введите и <Enter>"}
+                }
+            },
+            placeholder: "Нет данных",
+            columns: [
+                {title: "id", field: "id", align: 'left'},
+                {title: 'логин', field: 'username', align: 'left',
+                    headerFilter:"input", headerFilterLiveFilter:false},
+                {title: 'e-mail', field: 'email', align: 'left',  formatter: emailText,
+                    headerFilter:"input", headerFilterLiveFilter:false},
+                {title: 'Посл. активность', field: 'wasActive'},
+                {title: 'Активен', field: 'active'},
+                {title: 'Роли', field: 'roles', formatter: "textarea"},
+                {formatter:editButton, width:20, align:"center",
+                    cellClick:function(e, cell){
+                        location.href="/admin/editUser?id="+cell.getData().id+"&"+
+                            [[${_csrf.parameterName}]]+"="+[[${_csrf.token}]]
+                    }
+                }
+
+            ]
+        })
+        table.setLocale("ru_RU");
+        //table.addColumn();
+
+    }
+    window.addEventListener('resize', function () {
+        table.redraw(true); //trigger full rerender including all data and rows
+    });
+</script>
+
+<!--<div th:insert="~{footer ::footer}"></div>-->
+</html>
+
+

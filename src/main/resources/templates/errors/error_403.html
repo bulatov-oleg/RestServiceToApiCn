@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{header_bs ::head_ccs_bs}"></head>
+
+<body>
+<div th:replace="~{header_bs ::top}"></div>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12" style="background: white; box-shadow: 0 0 2px gray; padding-bottom:1em;" >
+                <h3> Необходима авторизация </h3>
+                <p><span th:if="${#request.getAttribute('javax.servlet.error.status_code')} != null"
+                         th:utext="' Статус ошибки  '+${#request.getAttribute('javax.servlet.error.status_code')}">
+            </span></p>
+                <p>
+            <span th:if="${#request.getAttribute('javax.servlet.error.message')} != null"
+                  th:utext="'Причина ошибки  '+${#request.getAttribute('javax.servlet.error.message')}">
+            </span>
+                </p>
+                <form class="form" id="ErrorForm" action="/index">
+                    <input type="submit" class="btn btn-default" name="ErrorFormSubmit" value="Перейти на главную страницу">
+                </form>
+
+                <!--<h5>
+                    Отслеживайте состояние своего лицевого счета и операции на нем.<br>
+                    Подавайте новые показания с любого устройства!<br>
+                </h5>-->
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12 " align="center">
+                <h6>
+                    <br><br>
+                    <b>Мы используем cookies  для работы сайта. Пожалуйста, разрешите(включите) cookies для Вашего браузера.</b>
+                    <br>
+                </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="~{footer ::footer}"></div>
+<!--<div th:insert="~{footer ::LiveInternet}"></div>-->
+</body>
+</html>

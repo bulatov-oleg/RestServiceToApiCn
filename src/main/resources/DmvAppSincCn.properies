@@ -1,0 +1,23 @@
+app.api.username=apiuser
+app.api.password=EDC321&&yhn963
+
+#app.app.url=https://domovoi.umgkh.ru
+app.app.url=https://domovoitest.umgkh.ru
+app.app.basic-auth.username=apiuser
+app.app.basic-auth.password=EDC321&&yhn963
+
+app.cn.url=https://www.kvartplata.ru:4433
+#Токен для доступа к данным ЦН ФГС. Для каждой Структурной единый свой. Выдается поддержкой ЦН
+#Для ООО Домовой
+app.cn.token=24F126D5028FDFE03F5406CEF4CFE070
+
+
+app.mail.host=smtp.yandex.ru
+app.mail.username=info@doma-sarapula.ru
+app.mail.password=rb4j99
+app.mail.port=465
+app.mail.protocol=smtps
+app.debug=true
+
+app.mail.sendToEmail=oleg_bulatov@mail.ru
+app.mail.email.subject=Сервис обмена МП Домовой - ЦН

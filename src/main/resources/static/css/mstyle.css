@@ -1,0 +1,651 @@
+body {
+    background-color: #E8E8E8;
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: Arial;
+}
+
+div, h1, h2, h3, ul, p {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    }
+
+#header {
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
+    z-index: 0;
+    background-color: #16A085;
+}
+
+#m_header {
+    background-color: #16A085;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 1;
+ /*   box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24); */
+}
+
+#m_header p.header_text {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1em;
+    line-height: 50px;
+}
+
+#m_body_content {
+    max-width: 620px;
+    margin: 0 auto;
+    background-color: #E8E8E8;
+    padding: 5px;
+}
+
+
+#m_body_content p.text_msgbox {
+    background: #FFFFD0;
+    font-family: Arial;
+    font-size: 1em;
+    color: #000000;
+    padding: 5px;
+    width: 97%;
+    margin: 5px auto;
+    border-radius: 3px;
+    border: 1px solid rgba(133, 133, 133, 0.4);
+}
+
+#m_body_content p.text_block {
+    background-color: #FFFFFF;
+    font-family: Arial;
+    font-size: 1em;
+    color: #000000;
+    width: 100%;
+    margin: 5px auto;
+    padding: 5px 5px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#m_body_content p.small_text_block {
+    float: left;
+    background-color: #FFFFFF;
+    font-family: Arial;
+    font-size: 1em;
+    color: #000000;
+    width: 100%;
+    /* margin: 5px auto; */
+    padding: 0.5em;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#m_body_content option.text_block {
+    background-color: #FFFFFF;
+    font-family: Arial;
+    font-size: 1em;
+    color: #000000;
+    width: 100%;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#m_body_content a.text_ref{
+    background-color: #FFFFFF;
+    font-family: Arial;
+    font-size: 1em;
+    color: #0000ff;
+    width: 100%;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#m_body_content div#StateLsDiv {
+    width:80%;
+    float: left;
+    margin-left: 0.4em;
+}
+
+/* #m_body_content div#LogoDiv {
+    float: left;
+    margin-left: 5px;
+    max-width:20%;
+} */
+
+#m_body_content div#LogoDiv {
+    float: left;
+    max-width:20%;
+}
+
+
+
+#m_body_content img.logo {
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: block;
+    float: left;
+    pointer-events: none;
+    margin: 0 auto;
+}
+
+#m_footer {
+    height: 10em;
+    background-color: #E8E8E8;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+/*Не смог запустить для footer.html
+#LiveInternet {
+    height: 80px;
+    background-color: #E8E8E8;
+    margin: 5px 0 0 0;
+    padding: 0;
+    align-content: center;
+} */
+
+#m_footer p.footer_text {
+    text-align: center;
+    color: #B8B8B8;
+    font-size: 0.8em;
+    line-height: 80px;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0px;
+    width:75%;
+}
+
+.baseform {
+    margin: 0 auto;
+    padding: 0px;
+    width:75%;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.login_form {
+    margin: 0 auto;
+    padding-top: 0.5em;
+    width:100%;
+    height: 20em;
+    background: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.forgot_registration_form {
+    margin: 0 auto;
+    padding-top: 0.3em;
+    padding-left: 0.1em;
+    width:100%;
+    height: 7em;
+    background: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.registration_form {
+    margin: 0 auto;
+    padding: 0px;
+    width: 50%;
+    background: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.login_form input[type=text], .login_form input[type=password], .registration_form input[type=text], .registration_form input[type=password]{
+    width: 100%;
+    margin: 0 auto;
+    height: 30px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid rgba(133, 133, 133, 0.4);
+    background: #FFFFFF;
+}
+
+input[type=submit] {
+    height: 2.5em;
+    border: 1px solid rgba(22, 160, 133, 0.4);
+    box-shadow: inset 0 1px 0 rgba(22, 160, 133, 0.3), inset 0 5px 5px rgba(22, 160, 133, 0.1);
+    border-radius: 3px;
+    background: #16A085;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+}
+
+   .login_form a  {
+        color: black;
+        text-decoration: none;
+        margin: 0.3em 0 0.3em 0.3em;
+    }
+
+   .login_form a:hover{
+        color: #16A085;
+        text-decoration: underline;
+    }
+
+    fieldset {
+            border-style: none;
+    }
+
+    .to_center {
+        padding: 5px 10px 5px 10px;
+    }
+
+    /* Reset Select */
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      border: 0 !important;
+      background: #16A085;
+      background-image: none;
+    }
+    /* Custom Select */
+    .select {
+     float: left;
+      position: relative;
+     /* display: block; */
+      width: 17em;
+      height: 2.5em;
+      line-height: 2.5;
+      background: #15896E;
+      overflow: hidden;
+      border-radius: .25em;
+    }
+    select {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0 0 0 .5em;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    /* Arrow */
+    .select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0 1em;
+      background: #229379;
+      pointer-events: none;
+      color: #FFFFFF;
+    }
+    /* Transition */
+    .select:hover::after {
+      color: #1DCAA1;
+    }
+    .select::after {
+      -webkit-transition: .25s all ease;
+      -o-transition: .25s all ease;
+      transition: .25s all ease;
+    }
+
+    #LsOperationsButtons{
+        padding-left: 5px;
+        box-sizing: border-box;
+        float:left;
+    }
+
+
+    #LsForm p.text_msgbox {
+        float: left;
+        width: max-content;
+        margin: 0.2em;
+    }
+
+    #LsOperationsButtons button  {
+        height: 2.5em;
+        border: 1px solid rgba(22, 160, 133, 0.4);
+        box-shadow: inset 0 1px 0 rgba(22, 160, 133, 0.3), inset 0 5px 5px rgba(22, 160, 133, 0.1);
+        border-radius: 3px;
+        background: #16A085;
+        font-family: 'Ubuntu', 'Lato', sans-serif;
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .login_form span b{
+        margin-top:1em;
+        margin-left: 0.3em;
+    }
+
+    #AddLs {
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #AddLsSelect {
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+    #AddLsSelectForm {
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #AddLs input[type=text] {
+        height: 2.5em;
+        margin-bottom: 0.5em;
+    }
+
+        #EmailForm {
+            background-color: white;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        #EmailForm input[type=text] {
+            height: 2.5em;
+            margin-bottom: 0.5em;
+            width:100%;
+        }
+
+    form#BuildingForm input[type=submit], form#ServiceForm input[type=submit]{
+             margin-left: 0.3em;
+         }
+
+    .forgot_registration_form input[type=text] {
+        height: 2.5em;
+        margin-bottom: 0.5em;
+    }
+
+@media screen and (max-width: 620px) {
+
+#m_body_content div#LogoDiv {
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: white;
+    max-width: 100%;
+}
+
+#m_body_content img.logo {
+    display: block;
+    float: none;
+    pointer-events: none;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+#m_body_content p.small_text_block {
+    float: none;
+    font-size: 1em;
+    color: #000000;
+    width: 98%;
+    margin: 5px auto;
+    padding: 0.5em;
+}
+
+#m_body_content div#StateLsDiv {
+    width: 98%;
+    margin-left: 0;
+}
+
+    table {
+        width: 100%;
+        border-radius: 3px;
+        margin: 0 auto;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr:nth-of-type(2n) {
+        background-color: #FFFFFF;
+        border-radius: 3px 3px 0px 0px;
+    }
+
+    tr td:first-child {
+        background-color: #D0D0D0;
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    tr th:first-child {
+        background-color: #D0D0D0;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    tbody td, tbody th {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #D0D0D0;
+        font-size: 1em;
+    }
+
+    tbody td, tbody th:before {
+        content: attr(data-th);
+        display: block;
+        text-align: center;
+    }
+
+  #LsOperationsButtons button {
+        height: 2.5em;
+        margin-top: 0.2em;
+        border: 1px solid rgba(22, 160, 133, 0.4);
+        box-shadow: inset 0 1px 0 rgba(22, 160, 133, 0.3), inset 0 5px 5px rgba(22, 160, 133, 0.1);
+        border-radius: 3px;
+        background: #16A085;
+        font-family: 'Ubuntu', 'Lato', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        color: white;
+
+    }
+
+    #LsOperationsButtons button span{
+        display:none;
+    }
+
+        #LsForm p, #LsForm span{
+            display:none;
+        }
+
+    #LsOperationsButtons button:before
+    {
+      float: left;
+      width: 1em;
+      font-size: 1.5em;
+      pointer-events: none;
+    }
+
+   #LsOperationsButtons button.lsSelButton:before {
+        content: "\2714";
+    }
+
+       #LsOperationsButtons button.lsAddButton:before {
+           content: "\271A";
+        }
+
+           #LsOperationsButtons button.lsDelButton:before {
+                content: "\2716";;
+            }
+
+    form#LsForm {
+        background: white;
+        padding: 0;
+        border-radius: 0px;
+        bottom: 0;
+        position: fixed;
+        left:0;
+        width:100%;
+        box-shadow: 0 1px 3px rgb(255, 255, 255), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .select {
+        margin-top:0.1em;
+        margin-left:0.1em
+    }
+
+    .registration_form{
+        width: 100%;
+    }
+
+    .login_form input[type=text], .login_form input[type=password], .registration_form input[type=text], .registration_form input[type=password] {
+        width: 98%;
+        height: 2.5em;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 3px;
+        border: 1px solid rgba(133, 133, 133, 0.4);
+        background: #FFFFFF;
+        margin: 0.2em;
+    }
+
+    input[type=submit] {
+        margin: 0.3em 0 0.3em 0.3em;
+        width: 98%;
+    }
+
+
+
+}
+
+
+@media (min-width: 620px) and (max-width: 1920px) {
+    #header {
+        width: 900px;
+        height: 50px;
+        margin: 0px auto;
+        z-index: 0;
+        background-color: transparent;
+    }
+
+    #m_header {
+        background-color: #16A085;
+        width: 100%;
+        max-width: 900px;
+        height: 50px;
+        position: fixed;
+        z-index: 1;
+        border-radius: 0 0 2px 2px;
+    }
+
+    #m_body_content {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #E8E8E8;
+        padding: 5px;
+    }
+
+    table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    th {
+        border-bottom: 3px solid #D0D0D0;
+        padding: 5px;
+        text-align: center;
+    }
+
+    td {
+        padding: 2px;
+    }
+
+    tr:nth-child(odd) {
+        background: white;
+    }
+
+    tr:nth-child(even) {
+        background: #D0D0D0;
+    }
+
+    .login_form input[type=text], .login_form input[type=password],
+    .registration_form input[type=text], .registration_form input[type=password]{
+        width: 98%;
+        height: 2.5em;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 3px;
+        border: 1px solid rgba(133, 133, 133, 0.4);
+        background: #FFFFFF;
+        margin: 0.2em;
+    }
+
+    .login_form {
+        margin: 0 auto;
+        padding-top: 0.5em;
+        width:50%;
+        height: 14em;
+        background: #FFFFFF;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+input[type=submit] {
+    height: 2.5em;
+    border: 1px solid rgba(22, 160, 133, 0.4);
+    box-shadow: inset 0 1px 0 rgba(22, 160, 133, 0.3), inset 0 5px 5px rgba(22, 160, 133, 0.1);
+    border-radius: 3px;
+    background: #16A085;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+
+}
+
+.login_form input[type=submit] {
+    margin: 0.3em 0 0.3em 0.3em;
+}
+
+
+
+form#LsForm {
+    background: white;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    border-radius: 0px;
+    bottom: 0;
+    position: fixed;
+    left:0;
+    width:100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    height: 4em;
+
+}
+
+}
+

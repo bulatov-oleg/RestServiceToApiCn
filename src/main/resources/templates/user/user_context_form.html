@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru-RU"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  >
+<head th:replace="~{header_bs ::head_ccs_bs}"></head>
+<body>
+<div th:replace="~{header_bs ::top}"></div>
+<div class="container">
+    <div class="below_nav">
+          <form class="form" th:action="@{/user/user_context_change}" method="post" autocomplete="on">
+           <h3><span><b>Смена пароля</b></span></h3>
+           <fieldset>
+                <div class="form-group">
+                    <label for="user-context-username">Имя пользователя</label>
+                    <input type="text" name="username" id="user-context-username" placeholder="Имя пользователя"
+                           th:value="${#request.getRemoteUser()}" readonly />
+                </div>
+                <div class="form-group">
+                    <label for="user-context-password_new">Новый пароль:</label>
+                    <input type="password" name="password_new" id="user-context-password_new" placeholder="Введите пароль"/>
+                </div>
+                <div class="form-group">
+                    <label for="user-context-repeatedPassword_new">Повторите пароль:</label>
+                    <input type="password" name="repeatedPassword_new" id="user-context-repeatedPassword_new" placeholder="Введите пароль"/>
+                </div>
+                <div><input type="submit" value="Изменить" class="btn btn-default"></div>
+            </fieldset>
+        </form>
+        <p th:if="${message}" class="alert-warning">  <span th:if="${message}" th:utext="${message}"></span></p>
+    </div>
+</div>
+</body>
+</html>
+
+
+
