@@ -9,7 +9,7 @@ public class RestServiceToApiCnException extends Exception {
 
     public RestServiceToApiCnException(String s, Throwable throwable) {
         super(s, throwable);
-        log.info(s);
+        log.info(s); //
         // и отправить по почте сообщение
     }
 
